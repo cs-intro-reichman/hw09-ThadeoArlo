@@ -95,24 +95,17 @@ public class List {
      * true. Otherwise, returns false.
      */
     public boolean remove(char chr) {
-        if (indexOf(chr) == -1)
-        return false;
-
-    Node prev = null;
-    Node current = first;
-
-    while (current != null && !(current.cp.equals(chr))) {
-        prev = current;
-        current = current.next;
-    }
-    if (prev == null) {
-        first = first.next;
-    } else {
-        prev.next = current.next;
-    }
-    size--;
-
-    return true;
+        if (indexOf(chr)==-1) return false;
+        Node prev=null;
+        Node curr=first;
+        while (!curr.cp.equals(chr)&&(curr!=null)) {
+            prev=curr;
+            curr=curr.next;
+        }
+        if (prev==null) first=first.next;
+        else prev.next=curr.next;
+        size--;
+        return true;
     }
 
     /**
