@@ -11,9 +11,8 @@
 public class List {
 
     // public static void main(String[] args) {
-    //     String s = "committed_";
     //     List l = new List();
-    //     for (int i=0; i<s.length(); i++) l.update(s.charAt(i));
+    //     String s = "committed_";
     // }
 
     // Points to the first node in this list
